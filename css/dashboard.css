@@ -1,5 +1,5 @@
 :root {
-    --main-color : #acf0f2;
+    --main-color : #07485B;
 }
 * {
     -moz-box-sizing: border-box;
@@ -35,50 +35,163 @@ a {
     height: 100vh;
 }
 
-.page .sidebar .logo{
+.page .sidebar .logo a img{ 
     text-align: center;
-    font-size: 25px;
-    font-weight: 700;
-    padding: 10px 70px;
-    position: relative;
-    text-transform: capitalize;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
+    margin-top: 8px;
+    width: 220px;
+    height: 80px;
+    padding: 20px 10px;
 }
-
-.page .sidebar .logo::after{
-    content: '';
-    position: absolute;
-    background-color: #666;
-    height: 2px;
-    width: 50%;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%,-50%);
-}
-
-.page .sidebar ul{
-    
-} 
 
 .page .sidebar ul li{
     margin-bottom: 10px;
+    position: relative;
+    border-radius: 3px;
+} 
+
+
+.page .sidebar ul li.active,
+.page .sidebar ul li:hover{
+    background-color: #eee;
+}
+
+.page .sidebar ul li.active::before,
+.page .sidebar ul li:hover::before{
+    content: '';
+    background-color: var(--main-color);
+    width: 10px;
+    height: 40px;
+    position: absolute;
+    border-radius: 5px;
 } 
 
 .page .sidebar ul li a {
     margin-left: 15px;
-    border: 1px solid black;
     padding: 10px;
     display: block;
-    width: 70%;
-    border-radius: 5px;
-    background-color:  #eee;
-    color: #07485B;
+    width: 85%;
+    color: var(--main-color);
 } 
 
 .page .sidebar ul li a .icon{
-    
+    font-weight: 900;
 } 
 
 .page .sidebar ul li a span{
-    
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 700;
+    margin-left: 10px;
 } 
+
+.page .sidebar .account {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.page .sidebar .account .create-account {
+    background-color: var(--main-color);
+    border-radius: 20px;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.page .sidebar .account .create-account:hover {
+    background-color: #eee;
+    border: 1px solid var(--main-color);
+}
+
+.page .sidebar .account .create-account a {
+    color: white;
+    text-transform: capitalize;
+    font-weight: 600;
+    padding: 10px;
+    display: block;
+}
+
+.page .sidebar .account .create-account a:hover {
+    color: var(--main-color);
+}
+
+.page .sidebar .account .create-account a .icon{
+    font-weight: 800;
+}
+
+.page .content {
+    width: 100%;
+}
+
+.page .content .bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    box-shadow: 0 4px 7px -5px #aaa;
+}
+
+.page .content .bar .bar-search{
+    padding: 0px 40px;
+    position: relative;
+    width: 80%;
+}
+
+.page .content .bar .bar-search i{
+    position: absolute;
+    color: var(--main-color);
+    font-weight: 900;
+    font-size: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 60px;
+}
+
+.page .content .bar .bar-search input{
+    padding: 10px 50px;
+    outline: none;
+    border-radius: 8px;
+    border: 2px solid var(--main-color);
+    background-color: #eee;
+    width: 70%;
+}
+
+.page .content .bar .bar-search input:focus{
+    border: 2px solid var(--main-color);
+    background-color: white;
+}
+
+.page .content .bar .bar-header{
+    position: relative;
+}
+
+.page .content .bar .bar-header span{
+    background-color: #0f90b8;
+    width: 15px;
+    height: 17px;
+    border-radius: 50%;
+    display: block;
+    text-align: center;
+    position: absolute;
+    z-index: 2;
+    font-size: 13px;
+    left: 11px;
+    color: white;
+    font-weight: 800;
+}
+
+.page .content .bar .bar-header .icon{
+    position: relative;
+    transform: translateY(-50%);
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--main-color);
+}
+
+.page .content .bar .bar-header img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
