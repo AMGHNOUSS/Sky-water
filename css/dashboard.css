@@ -164,7 +164,7 @@ a {
     position: relative;
 }
 
-.page .content .bar .bar-header span{
+.page .content .bar .bar-header .not-span{
     background-color: #0f90b8;
     width: 15px;
     height: 17px;
@@ -194,4 +194,76 @@ a {
     margin-left: 20px;
     margin-right: 10px;
 }
+
+.page .content .bar .notification{
+    border: 1px solid #ddd;
+    width: 200px;
+    height: 100px;
+    position: absolute;
+    background-color: #eee;
+    top: 40px;
+    right: 70px;
+    border-radius: 10px;
+    display: none;
+}
+
+.page .content .bar .not:hover + .notification{
+    display: block;
+}
+
+.page .content .bar .notification ul li{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.page .content .bar .notification ul li a{
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 17px;
+    color: var(--main-color);
+    margin-left: 10px;
+}
+
+.page .content .bar .notification ul li span{
+    background-color: var(--main-color);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 8px;
+}
+
+.page .content .bar .profile-content{
+    border: 1px solid #ddd;
+    padding: 0px;
+    width: 200px;
+    height: 100px;
+    position: absolute;
+    background-color: #eee;
+    top: 40px;
+    right: 20px;
+    border-radius: 10px;
+    display: none;
+}
+
+.page .content .bar .img:hover + .profile-content{
+    display: block;
+}
+
+.page .content .bar .profile-content ul li{
+    padding: 6px;
+}
+
+.page .content .bar .profile-content ul li i{
+    margin-left: 10px;
+}
+
+.page .content .bar .profile-content ul li a{
+    text-decoration: none;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 17px;
+    color: var(--main-color);
+}
+
+
 
